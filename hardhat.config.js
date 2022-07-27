@@ -1,6 +1,12 @@
 require("@nomiclabs/hardhat-waffle");
 
-const PRIVATE_KEY ="";
+task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+  const accounts = await hre.ethers.getSigners();
+
+  for (const account of accounts) {
+    console.log(account.address);
+  }
+});
 
 
 module.exports = {
@@ -15,17 +21,17 @@ module.exports = {
         }
         
       },
-      mainnet: {
-        url: `https://api.avax.network/ext/bc/C/rpc`,
-          accounts: [`${PRIVATE_KEY}`]
-      },
-      fuji: {
-        url: `https://api.avax-test.network/ext/bc/C/rpc`,
-         accounts: [`${PRIVATE_KEY}`]
-      },
-      rinkeby: {
-        url: "https://eth-rinkeby.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
-        accounts: [`${PRIVATE_KEY}`],
-      }
+      // mainnet: {
+      //   url: `https://api.avax.network/ext/bc/C/rpc`,
+      //     accounts: [`${PRIVATE_KEY}`]
+      // },
+      // fuji: {
+      //   url: `https://api.avax-test.network/ext/bc/C/rpc`,
+      //    accounts: [`${PRIVATE_KEY}`]
+      // },
+      // rinkeby: {
+      //   url: "https://eth-rinkeby.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
+      //   accounts: [`${PRIVATE_KEY}`],
+      // }
     }
 };

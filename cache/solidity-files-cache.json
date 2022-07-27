@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\contracts\\Token.sol": {
-      "lastModificationDate": 1658925972869,
-      "contentHash": "6b164449cde28de71ffc60511a5a8f44",
+      "lastModificationDate": 1658962222727,
+      "contentHash": "c7e066af8ad0b23397231d7b270def22",
       "sourceName": "contracts/Token.sol",
       "solcConfig": {
         "version": "0.8.10",
@@ -31,10 +31,15 @@
       "imports": [
         "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
         "@openzeppelin/contracts/access/Ownable.sol",
-        "./interfaces/ILendingPool.sol"
+        "@aave/core-v3/contracts/protocol/pool/Pool.sol",
+        "./interfaces/IJOERouter.sol",
+        "./interfaces/IPoolAave.sol",
+        "./interfaces/IPoolPlatypus.sol",
+        "./interfaces/IStakePlatypus.sol",
+        "./interfaces/IAaveRewards.sol"
       ],
       "versionPragmas": [
-        "0.8.10"
+        "^0.8.10"
       ],
       "artifacts": [
         "IWeth",
@@ -374,7 +379,7 @@
       ]
     },
     "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\node_modules\\@aave\\core-v3\\contracts\\protocol\\pool\\Pool.sol": {
-      "lastModificationDate": 1658913036810,
+      "lastModificationDate": 1658924553014,
       "contentHash": "37114dc824ea67ee53b3657132deb711",
       "sourceName": "@aave/core-v3/contracts/protocol/pool/Pool.sol",
       "solcConfig": {
@@ -498,8 +503,8 @@
       ]
     },
     "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\node_modules\\@aave\\core-v3\\contracts\\protocol\\libraries\\configuration\\ReserveConfiguration.sol": {
-      "lastModificationDate": 1658913036830,
-      "contentHash": "c4d25adbd5d40b4f10f02ab612cdfd43",
+      "lastModificationDate": 1658961234979,
+      "contentHash": "e67b75f4c48ce5db5d757fb461b3504a",
       "sourceName": "@aave/core-v3/contracts/protocol/libraries/configuration/ReserveConfiguration.sol",
       "solcConfig": {
         "version": "0.8.10",
@@ -529,7 +534,7 @@
         "../types/DataTypes.sol"
       ],
       "versionPragmas": [
-        "0.8.10"
+        "^0.8.10"
       ],
       "artifacts": [
         "ReserveConfiguration"
@@ -2233,6 +2238,181 @@
       ],
       "artifacts": [
         "ILendingPoolAddressesProvider"
+      ]
+    },
+    "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\contracts\\interfaces\\IJOERouter.sol": {
+      "lastModificationDate": 1658960934553,
+      "contentHash": "5db96d1211609a41582e0f5107d8ee41",
+      "sourceName": "contracts/interfaces/IJOERouter.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IJOERouter"
+      ]
+    },
+    "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\contracts\\interfaces\\IAaveRewards.sol": {
+      "lastModificationDate": 1658961037138,
+      "contentHash": "a16d851e2fc50ff9fda6dd8306322ad1",
+      "sourceName": "contracts/interfaces/IAaveRewards.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAaveRewards"
+      ]
+    },
+    "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\contracts\\interfaces\\IPoolAave.sol": {
+      "lastModificationDate": 1658961058738,
+      "contentHash": "ce620bd08603fa96cf700e2138076e4a",
+      "sourceName": "contracts/interfaces/IPoolAave.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPoolAave"
+      ]
+    },
+    "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\contracts\\interfaces\\IPoolPlatypus.sol": {
+      "lastModificationDate": 1658961074246,
+      "contentHash": "2dc5ba8c29d059fb29efafa7bcfea063",
+      "sourceName": "contracts/interfaces/IPoolPlatypus.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IPoolPlatypus"
+      ]
+    },
+    "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\contracts\\interfaces\\IStakePlatypus.sol": {
+      "lastModificationDate": 1658961096721,
+      "contentHash": "2e6d4e9e77cfa4a6b1ce2d6257782f56",
+      "sourceName": "contracts/interfaces/IStakePlatypus.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IStakePlatypus"
       ]
     }
   }
