@@ -1,10 +1,12 @@
 require("@nomiclabs/hardhat-waffle");
 
-const PRIVATE_KEY ="9ea5c3762c236ab586e48f94a7003c05cd809c1d383ee8ee8a30562eb05cef4a";
+const PRIVATE_KEY ="";
 
 
 module.exports = {
-    solidity: "0.8.10",
+    solidity: {
+      compilers:[{version:"0.8.7"},{version:"0.6.6"},{version:"0.4.19"},{version:"0.8.10"},{version:"0.6.12"}],
+    },
     networks: {
 
       hardhat:{
