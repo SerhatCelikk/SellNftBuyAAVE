@@ -4,7 +4,7 @@ pragma solidity 0.8.10;
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 //import "@aave/core-v3/contracts/protocol/pool/Pool.sol";
-import "./interfaces/ILendingPool.sol";
+// import "./interfaces/ILendingPool.sol";
 
 interface IWeth {
   function allowance(address owner, address spender) external view returns (uint256 remaining);
@@ -36,7 +36,7 @@ interface IWeth {
 
 contract Token is ERC1155, Ownable {
 
-    IWeth wethContract;
+    // IWeth wethContract;
     // Pool aaveDeposit;
     string public name;
     string public symbol;
@@ -49,7 +49,7 @@ contract Token is ERC1155, Ownable {
         name = "AAVE Lottery";
         symbol = "LOT";
       //  Pool aaveDeposit = Pool(0x8f57153F18b7273f9A814b93b31Cb3f9b035e7C2);
-        wethContract=IWeth(0x407287b03D1167593AF113d32093942be13A535f);
+        // wethContract=IWeth(0x407287b03D1167593AF113d32093942be13A535f);
     }
 
     function setMintPrice(uint256 _mintPrice) public onlyOwner {
@@ -86,9 +86,9 @@ contract Token is ERC1155, Ownable {
         payable(particapants[winnerIndex]).transfer(address(this).balance);
         lastLottery=block.timestamp;
     }
-    function getWeth() private {
-    wethContract.deposit{value:address(this).balance}();
-    }
+    // function getWeth() private {
+    // wethContract.deposit{value:address(this).balance}();
+    // }
 
     
 }
