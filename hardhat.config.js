@@ -11,8 +11,9 @@ module.exports = {
 
       hardhat:{
         forking: {
-          url:"https://eth-rinkeby.alchemyapi.io/v2/sf7Mr0i_qcauE2bqJWAuR9syrrJ8y8vA"
+          url: "https://api.avax.network/ext/bc/C/rpc",
         }
+        
       },
       mainnet: {
         url: `https://api.avax.network/ext/bc/C/rpc`,
