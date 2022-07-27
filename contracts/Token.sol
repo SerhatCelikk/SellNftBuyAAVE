@@ -68,18 +68,22 @@ contract Token is ERC1155, Ownable {
         _mint(account, 1, amount, data);
     }
 
-    function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
-        public
-        onlyOwner
-    {
-        _mintBatch(to, ids, amounts, data);
-    }
+    // function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
+    //     public
+    //     onlyOwner
+    // {
+    //     _mintBatch(to, ids, amounts, data);
+    // }
 
+
+    //Choose Random Winner
     function randMod(uint256 _modulus) internal returns(uint){
         randNonce++;
         return uint(keccak256(abi.encodePacked(block.timestamp,msg.sender,randNonce)))%_modulus;
     }
     
+
+    //Send to winner total ETH
     function drawWinner()public{
         require(block.timestamp>(lastLottery+ 7 days),"waiting period has not expired");
         uint256 winnerIndex = randMod(particapants.length);
