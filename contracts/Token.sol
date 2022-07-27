@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.2;
+pragma solidity 0.8.10;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@aave/core-v3/contracts/protocol/pool/Pool.sol";
 
 contract Token is ERC1155, Ownable {
+    Pool aaveDeposit;
     string public name;
     string public symbol;
     uint256 public mintPrice = 1 ether;
@@ -15,6 +17,7 @@ contract Token is ERC1155, Ownable {
     constructor() ERC1155("") {
         name = "AAVE Lottery";
         symbol = "LOT";
+        Pool aaveDeposit = Pool(0x8f57153F18b7273f9A814b93b31Cb3f9b035e7C2);
     }
 
     function setMintPrice(uint256 _mintPrice) public onlyOwner {
@@ -41,6 +44,7 @@ contract Token is ERC1155, Ownable {
     }
 
     function buyAAVE() public {
+        
     }
 
     function randMod(uint256 _modulus) internal returns(uint){

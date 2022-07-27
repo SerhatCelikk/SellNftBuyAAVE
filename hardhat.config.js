@@ -1,6 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 
-const PRIVATE_KEY ="";
+const PRIVATE_KEY ="9ea5c3762c236ab586e48f94a7003c05cd809c1d383ee8ee8a30562eb05cef4a";
 
 
 module.exports = {
