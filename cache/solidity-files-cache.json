@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Admin\\Desktop\\SellNftBuyAAVE\\contracts\\Token.sol": {
-      "lastModificationDate": 1658962222727,
-      "contentHash": "c7e066af8ad0b23397231d7b270def22",
+      "lastModificationDate": 1658963170362,
+      "contentHash": "7b843a942ea2c8fb4f0a872bc8cb5c38",
       "sourceName": "contracts/Token.sol",
       "solcConfig": {
         "version": "0.8.10",
